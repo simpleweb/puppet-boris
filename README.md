@@ -6,7 +6,7 @@ Install Boris - from https://github.com/d11wtq/boris with puppet-boris module
 
 ## Installation
 
-#### Installation via puppet forge (RECOMMENDED, automatically installs all dependencies)
+#### Installation via Puppet forge (RECOMMENDED, automatically installs all dependencies)
 
     puppet module install --target-dir=/your/path/to/modules simpleweb-boris
 
@@ -26,17 +26,16 @@ In your manifest.pp:
 
     include boris
 
-#### Configuring the boris install
+#### Configuring the Boris install
 
 In your manifest.pp:
 
 ```puppet
-    # configure boris install - not nessecary, comes with sane defaults
-    class { 'boris':
-        target_dir      => '/usr/local/bin',
-        boris_file   => 'boris', # could also be 'boris.phar'
-        download_method => 'curl', # or 'wget'
-    }
+# configure boris install - not nessecary, comes with sane defaults
+class { 'boris':
+    target_dir   => '/usr/local/bin',
+    boris_file   => 'boris', # could also be 'boris.phar'
+}
 ```
 
 ## Contributors
